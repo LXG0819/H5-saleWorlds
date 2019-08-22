@@ -1,0 +1,66 @@
+#alliance>._v-container>._v-content,
+.information-data>._v-container>._v-content{
+  padding-bottom: .5rem;
+}
+
+.icon-direction-right{
+  display: inline-block;
+  width: 0.08rem;
+  height: 0.13rem;
+  background: url(../../img/icon_btn_right.png) no-repeat center center;
+  background-size: 0.08rem 0.13rem;
+}
+
+.picture-list{
+  display: flex;
+  flex-flow: row wrap;
+  margin:0;
+  margin-top:.1rem;
+  padding: 1px 0 0 .13rem;
+  li{
+    width: 1.14rem;
+    height: 1.15rem;
+    margin-right: .04rem;
+    margin-top: .11rem;
+    position: relative;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:last-child {
+      padding: .38rem;
+      border:.005rem dashed #C7C7CC;
+    }
+    .deletePic{
+      position: absolute;
+      right: .06rem;
+      top: .08rem;
+      width:.14rem;
+      height:.14rem;
+    }
+    img{
+      width:.38rem;
+      height:.38rem;
+    }
+    .default-pic {
+      display: inline-block;
+      width:.38rem;
+      height:.38rem;
+      background: url(../../img/door-picture.png) center no-repeat;
+      background-size: 38px;
+    }
+  }
+}
+
+.submit-btn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: .5rem;
+  line-height: .5rem;
+  background: #F44848;
+  box-shadow: 0 -.02rem .08rem 0 rgba(0, 0, 0, .1);
+  border: none;
+  font-size: .18rem;
+  color: rgb(255, 255, 255);
+}

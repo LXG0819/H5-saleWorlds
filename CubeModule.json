@@ -1,0 +1,13 @@
+{
+    "releaseNote": "TBD",
+    "build": 22400,
+    "name": "saleWorlds",
+    "identifier": "com.tcl.saleWorlds",
+    "action": "",
+    "index": "index.html",
+    "version": "2.2.4",
+    "testVersion": "2.2.4",
+    "productVersion": "1.1.9",
+    "isDebug": 1,
+    "isPcTest": 0
+}

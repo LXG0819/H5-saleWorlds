@@ -1,0 +1,354 @@
+@border-color: #e3e3e3;
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: #000;
+  user-select: text;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.report-btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: .5rem;
+  line-height: .5rem;
+  z-index: 99;
+  background: #F44848;
+  box-shadow: 0 -2px 8px 0 rgba(0,0,0,0.10);
+  font-family: PingFangSC-Regular;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+.terminal-check {
+  .scrollable {
+    overflow-y: visible;
+    overflow-x: visible;
+    padding: auto .15rem;
+    .vux-tab-item {
+      flex: 1;
+      font-size: .12rem;
+    }
+  }
+  .vux-tab-container{
+    /*padding: 0 .15rem;*/ 
+  }
+}
+button, input, select, textarea {
+  font-family: "微软雅黑", Roboto, "Segoe UI", sans-serif;
+  margin: 0;
+  outline-offset: 0;
+  outline-style: none;
+  outline-width: 0;
+  -webkit-font-smoothing: inherit;
+  background-image: none;
+  font-weight: 400;
+  font-size: 14px;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.bg-white {
+  background: #fff !important;
+}
+.bg-gray {
+  background: #484759 !important;
+}
+
+.c-blue {
+  color: #387ef5;
+}
+
+.header {
+  background: #fff !important;
+  border-bottom: 1px solid @border-color;
+  color: #3385ff;
+  font-size: 16px;
+
+  .mint-header-title {
+    color: #777;
+    font-size: 16px;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.sub-header {
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid @border-color;
+  color: #3385ff;
+  background: #fff !important;
+  line-height: 40px;
+  z-index: 9;
+}
+
+.has-header {
+  top: 40px;
+}
+
+.has-sub-header {
+  top: 80px;
+}
+
+.has-footer {
+  bottom: 40px;
+}
+
+.has-tab {
+  padding-bottom: 55px;
+}
+
+// 不换行，超长 ... 。注意设置 title 属性
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+  // vertical-align: bottom;
+  // display: block;
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+  padding: 0 10px 0 15px;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+
+
+
+  &.search-box-full {
+    .keyword {
+      input {
+
+      }
+      .placeholder {
+        background: url(../../img/search.png) no-repeat center;
+        background-size: 16px;
+        background-size: 16px;
+        position: absolute;
+        background-position-x: ~'calc(50% - 20px)';
+        width: ~'calc(100% - 26px)';
+        height: 30px;
+        line-height: 30px;
+        left: 15px;
+        top: 5px;
+        font-size: 12px;
+        color: #9c9fa4;
+      }
+    }
+
+    .clear-icon {
+      right: 15px;
+    }
+  }
+  .keyword {
+    flex: 1;
+    input {
+      width: 100%;
+      height: 30px;
+      margin-top: 5px;
+      line-height: 30px;
+      box-sizing: border-box;
+      border: 1px solid @border-color;
+      border-radius: 20px;
+      text-align: center;
+      outline: none;
+      padding: 0 30px 0 15px;
+    }
+  }
+
+  .search-icon {
+    width: 30px;
+    height: 30px;
+    margin: 5px 0 0 5px;
+    line-height: 30px;
+    text-align: center;
+    background: url(../../img/search.png) no-repeat center;
+    background-size: 20px;
+  }
+
+  .clear-icon {
+    position: absolute;
+    top: 6px;
+    right: 50px;
+    width: 26px;
+    height: 26px;
+    background: url(../../img/clear.png) no-repeat center;
+    background-size: 15px;
+  }
+}
+
+#app {
+  font-family: "PingFangSC-Regular", -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #333;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.mint-tabbar {
+  .mint-tab-item {
+    .mint-tab-item-label {
+      color: #a3a3a3;
+    }
+  }
+}
+
+.router-view {
+  width: 100%;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+  height: 100%;
+  -webkit-transform-style: preserve-3d; 
+  -webkit-perspective: 1000; 
+}
+
+.pop-out-enter-active,
+.pop-out-leave-active,
+.pop-in-enter-active,
+.pop-in-leave-active {
+  will-change: transform;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.pop-static-enter-active,
+.pop-static-leave-active {
+  will-change: transform;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.pop-static-enter-active {
+  animation-name: popInStatic;
+}
+
+.pop-static-leave-active {
+  animation-name: popInStatic;
+}
+
+.pop-out-enter-active {
+  animation-name: popInLeft;
+}
+
+.pop-out-leave-active {
+  animation-name: popOutRight;
+}
+
+.pop-in-enter-active {
+  animation-name: popInRight;
+}
+
+.pop-in-leave-active {
+  animation-name: popOutLeft;
+}
+
+@keyframes popInStatic {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes popOutLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes popInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes popOutRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.content-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+.j-zIndex{
+  z-index: 2019 !important;
+}

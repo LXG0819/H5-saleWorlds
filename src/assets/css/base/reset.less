@@ -1,0 +1,64 @@
+@import "./variable";
+/*浏览器默认样式清清除或者设置*/
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a img {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    // .setTapColor();
+}
+
+ol, ul {
+  list-style: none;
+}
+
+
+/*mint ui 框架复写*/
+.mint-cell-wrapper {
+  padding: 0;
+}
+
+.mint-header{
+  .theme-filed;
+  border-bottom: 1px solid @theme-border-color;
+}
+
+.mint-header-title{
+    overflow: inherit;
+}
+
+.mint-button--default {
+    .theme-button;
+}
+.mint-button::after {
+    background-color: @theme-babg-color;
+}
+.mint-cell{
+    .theme-bg
+}
+.mint-header {
+  height: 44px;
+  background-color: #C53A3A;
+  border-bottom-color: #C53A3A;
+  .mint-header-title {
+    font-size: 18px;
+  }
+}
+
+/*vux UI 框架复写*/

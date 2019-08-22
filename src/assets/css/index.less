@@ -1,0 +1,140 @@
+//基础样式
+@import "base/index";
+//重置样式
+@import "reset/index";
+// 重置scoller padding-bottom:.5rem
+@import "information/index"; 
+
+// 返回图标
+.icon-back{
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.168rem;
+  background:url(../img/common_nav-fanhui_nor.png) no-repeat;
+  background-size: 0.2rem 0.168rem;
+}
+
+// 内容区的content的top
+.content.has-header{
+  top: 0.44rem;
+}
+
+.mint-header.is-fixed{
+  z-index: 2 !important;
+}
+
+// 让加载等待z-index更高
+.mint-indicator{
+  >div{
+    z-index: 1
+  }
+}
+
+*{
+  -webkit-tap-highlight-color:transparent;
+}
+
+#dataActionSheet{
+  .mint-actionsheet{
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .actionsheet-float-enter, .actionsheet-float-leave-active {
+    -webkit-transform: translate(-50%, 100%);
+            transform: translate(-50%, 100%);
+  }
+}
+
+// 头部固定栏
+  *{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  #app {
+    .mint-header {  
+      background-color: #C53A3A;
+      font-size: 0.18rem;
+      height: 0.44rem;
+      .mint-header-title{
+        overflow: visible;
+        font-size: 0.18rem;
+        height: 0.18rem;
+        line-height: 0.18rem;
+      }
+    }
+  }  
+  .my-scroller{
+    >div{
+      min-height: 100%;
+    }
+  }
+  /* 重置mint ui datetime-picker组件 在android 空白 */
+  .mint-datetime-action {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content.has-content {
+    top: .44rem;
+  }
+
+  .article-details {
+    img.raw-image,
+    img[alt],
+    img[title] {
+      display: block;
+      max-width: 3.51rem !important;
+    }
+
+    video {
+      width: 3.51rem;
+    }
+  }
+
+  //
+  .mint-tab-item-label{
+    font-size: 0.14rem;
+  }
+  //
+  .mint-button{
+    height: 0.54rem;
+  }
+  .mint-header-title{
+    color: #fff;
+  }
+  .mint-button-text{
+  
+    img{
+      width: 0.25rem;
+      height: 0.25rem;
+    }
+  }
+  //
+  .mint-radio-label{
+    font-size: 0.14rem;
+    color: #666;
+
+  }
+  .mint-radio{
+    width: 0.2rem;
+    height: 0.2rem;
+    padding: 0;
+  }
+  .mint-cell-wrapper{
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    min-height: 0.40rem;
+    margin: 0;
+    border-radius: 0.05rem;
+  }
+  .riden_option{
+    padding: 0;
+  }
+
+
+  ._v-container  ._v-content  .pull-to-refresh-layer {
+    float:left;
+    top:0;
+    left:0;
+}
